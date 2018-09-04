@@ -94,8 +94,8 @@ const Checkbox = (props) => {
 }
 
 const CheckboxDynamic = ({
-                             children, className, ...props
-                         }) => (
+   children, className, ...props
+}) => (
     <StyledCheckbox className={className}>
         <StyledInput type="checkbox" {...props} />
         <StyledLabel>{children}</StyledLabel>
