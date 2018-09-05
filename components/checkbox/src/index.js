@@ -112,17 +112,21 @@ const StyledLabel = styled('span')({
  * - https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
  *
  */
+
+
 const Checkbox = ({
-  children, className, ...props
-}) => (
-  <StyledCheckbox className={className}>
-    <StyledInput type="checkbox" {...props} />
-    <StyledLabel>{children}</StyledLabel>
-  </StyledCheckbox>
+                             children, className, ...props
+                         }) => (
+     props.list.map((text) => (
+    <StyledCheckbox className={className}>
+        <StyledInput type="checkbox" {...props} />
+        <StyledLabel>{text}</StyledLabel>
+    </StyledCheckbox>))
 );
 
 Checkbox.defaultProps = {
   className: undefined,
+  list : [],
 };
 
 Checkbox.propTypes = {

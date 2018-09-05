@@ -11,30 +11,29 @@ Checkbox
 
 Simple
 ```jsx
-<Checkbox>Text displayed next to checkbox</Checkbox>
+<Checkbox list={arraylist} />
 ```
 
 With disabled state
 ```jsx
-<Checkbox disabled="disabled">Disabled checkbox option</Checkbox>
+<Checkbox disabled="disabled" list={arraylist} />
 ```
 
 Checkbox preselected
 ```jsx
-<Checkbox defaultChecked>Farm or agricultural waste</Checkbox>
+<Checkbox defaultChecked list={arraylist} />
 ```
 
 Checkbox preselected & disabled
 ```jsx
-<Checkbox disabled="disabled" defaultChecked>Farm or agricultural waste</Checkbox>
+<Checkbox disabled="disabled" defaultChecked list={arraylist} />
 ```
 ### References:
-- https://github.com/alphagov/govuk-frontend/blob/master/src/components/checkboxes/_checkboxes.scss
 
 ### Properties
 Prop | Required | Default | Type | Description
 :--- | :------- | :------ | :--- | :----------
- `children` | true | `````` | node | Text content for checkbox
+ `list` | true | []| node | Array of text content for checkbox
  `className` |  | ```undefined``` | string | CSS Classname for outermost container
 
 
